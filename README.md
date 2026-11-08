@@ -17,7 +17,7 @@
   <a href="https://github.com/zain-cmd-hub/GitPulse/archive/refs/heads/main.zip">
     <img src="https://img.shields.io/badge/⬇️_Download-GitPulse_ZIP-2ea44f?style=for-the-badge&logo=github&logoColor=white" alt="Download GitPulse ZIP">
   </a>
-  <a href="GitPulse-v1.0.0.zip">
+  <a href="https://github.com/zain-cmd-hub/GitPulse/releases/download/v1.0.0/GitPulse-v1.0.0.zip">
     <img src="https://img.shields.io/badge/📦_Offline_Release-GitPulse--v1.0.0.zip-0969da?style=for-the-badge" alt="Download Offline Package">
   </a>
 </p>
@@ -43,7 +43,7 @@ You can download GitPulse directly using either option below:
 | Download Type | Link | Description |
 | :--- | :--- | :--- |
 | **🚀 Direct GitHub ZIP** | [**Download Latest ZIP (GitHub)**](https://github.com/zain-cmd-hub/GitPulse/archive/refs/heads/main.zip) | Instant download of the latest repository source ZIP from GitHub. |
-| **📦 Pre-Packaged Offline ZIP** | [**Download GitPulse-v1.0.0.zip**](GitPulse-v1.0.0.zip) | Complete offline distribution archive containing all extension assets. |
+| **📦 Pre-Packaged Offline ZIP** | [**Download GitPulse-v1.0.0.zip**](https://github.com/zain-cmd-hub/GitPulse/releases/download/v1.0.0/GitPulse-v1.0.0.zip) | Complete offline distribution archive containing all extension assets. |
 
 ---
 
