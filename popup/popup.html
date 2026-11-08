@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="popup.css">
+  <title>GitPulse</title>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="logo">GP</div>
+      <div>
+        <h1>GitPulse</h1>
+        <p>Challenge → Accepted → GitHub</p>
+      </div>
+    </header>
+
+    <section class="card">
+      <div class="line">
+        <b>GitHub</b>
+        <span id="github" class="pill">Checking…</span>
+      </div>
+      <div id="repo" class="muted">Not configured</div>
+      <button id="verify" class="secondary">Verify GitHub</button>
+    </section>
+
+    <section class="card">
+      <h2>Current page diagnostics</h2>
+      <div id="site" class="muted">Open a 30accd.xyz challenge page.</div>
+      <div id="diag" class="diagnostics"></div>
+      <div class="actions">
+        <button id="diagnose">Run diagnostics</button>
+        <button id="copy" class="secondary">Copy report</button>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="line">
+        <b>Automatic upload</b>
+        <span id="auto" class="pill">—</span>
+      </div>
+      <p class="muted">Uploads only after a fresh accepted-success dialog is detected following a submit click.</p>
+    </section>
+
+    <footer>
+      <button id="settings" class="secondary">Settings</button>
+      <button id="openrepo" class="secondary">Open repository</button>
+    </footer>
+
+    <p id="status" role="status"></p>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>

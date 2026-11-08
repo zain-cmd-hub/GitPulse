@@ -1,0 +1,43 @@
+{
+  "manifest_version": 3,
+  "name": "GitPulse",
+  "version": "1.0.0",
+  "description": "Capture verified accepted 30ACC coding submissions and archive them to GitHub.",
+  "permissions": ["storage", "activeTab", "notifications", "clipboardWrite"],
+  "host_permissions": ["https://30accd.xyz/*", "https://api.github.com/*"],
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "background": {
+    "service_worker": "background/service-worker.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "GitPulse",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "options_page": "options/options.html",
+  "content_scripts": [
+    {
+      "matches": ["https://30accd.xyz/*"],
+      "js": ["content/content.js"],
+      "run_at": "document_idle",
+      "world": "ISOLATED"
+    },
+    {
+      "matches": ["https://30accd.xyz/*"],
+      "js": ["content/page-bridge.js"],
+      "run_at": "document_idle",
+      "world": "MAIN"
+    }
+  ]
+}

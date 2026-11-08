@@ -1,0 +1,36 @@
+name: Feature Request / Platform Adapter
+description: Propose a new feature or adapter for GitPulse
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Have an idea for a new feature or want an adapter for another coding platform (e.g. LeetCode, HackerRank)? Let us know below!
+
+  - type: textarea
+    id: feature-description
+    attributes:
+      label: Feature / Adapter Proposal
+      description: A clear and concise description of the feature or platform adapter you would like added.
+      placeholder: Describe the feature or platform...
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem-or-use-case
+    attributes:
+      label: Use Case & Motivation
+      description: Is your feature request related to a specific problem or workflow?
+      placeholder: E.g., I want to sync solutions from LeetCode to the same GitHub repo...
+    validations:
+      required: true
+
+  - type: textarea
+    id: technical-context
+    attributes:
+      label: Technical Details (Optional)
+      description: If proposing a new platform, provide details on its editor (Monaco, CodeMirror), submission button selectors, or API endpoints if known.
+    validations:
+      required: false
+

@@ -1,0 +1,25 @@
+{
+  "name": "gitpulse",
+  "version": "1.0.0",
+  "description": "Automatically sync accepted coding challenge solutions to GitHub.",
+  "private": true,
+  "homepage": "https://github.com/zain-cmd-hub/GitPulse",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zain-cmd-hub/GitPulse.git"
+  },
+  "author": "Mohammad Abbas <https://github.com/zain-cmd-hub>",
+  "license": "MIT",
+  "keywords": [
+    "chrome-extension",
+    "github",
+    "coding-challenges",
+    "developer-tools",
+    "javascript",
+    "manifest-v3",
+    "automation"
+  ],
+  "scripts": {
+    "test": "node tests/smoke-test.js && node tests/verify-links.js"
+  }
+}

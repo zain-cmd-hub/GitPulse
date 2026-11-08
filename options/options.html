@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="options.css">
+  <title>GitPulse Settings</title>
+</head>
+<body>
+  <main>
+    <h1>GitPulse Settings</h1>
+    <p class="sub">Connect one GitHub repository. Your token stays in the extension's trusted storage context and is never sent to the website.</p>
+
+    <section>
+      <label>GitHub owner / username
+        <input id="owner" placeholder="zain-cmd-hub" autocomplete="off">
+      </label>
+
+      <label>Repository name
+        <input id="repo" placeholder="30-Days-of-Code-2026---ACC" autocomplete="off">
+      </label>
+
+      <label>Fine-grained GitHub token
+        <input id="token" type="password" placeholder="Paste token (only shown while entering)" autocomplete="new-password">
+      </label>
+      <p id="tokenstate" class="hint"></p>
+
+      <label class="check">
+        <input type="checkbox" id="auto" checked> Enable automatic upload after verified ACCEPTED result
+      </label>
+
+      <label>Optional success-dialog CSS selector
+        <input id="successSelector" placeholder="Leave blank to use observed success dialog text">
+      </label>
+
+      <label>Optional accepted-text regex
+        <input id="successRegex" placeholder="ACCEPTED">
+      </label>
+
+      <label class="check">
+        <input type="checkbox" id="fallback"> Allow lower-confidence textarea / contenteditable extraction
+      </label>
+
+      <div class="buttons">
+        <button id="save">Save settings</button>
+        <button id="verify" class="secondary">Verify GitHub access</button>
+        <button id="disconnect" class="danger">Remove saved token</button>
+      </div>
+
+      <p id="status" role="status"></p>
+    </section>
+
+    <section>
+      <h2>Important Setup Notes</h2>
+      <ul>
+        <li>Create a fine-grained Personal Access Token (PAT) restricted to this specific repository.</li>
+        <li>Grant <b>Contents: Read and write</b> permissions. Metadata read-only is granted automatically by GitHub.</li>
+        <li>Never share the token in screenshots, chat, or diagnostic reports.</li>
+        <li>Automatic upload requires a fresh submit click followed by the site's observed success dialog.</li>
+      </ul>
+    </section>
+  </main>
+  <script src="options.js"></script>
+</body>
+</html>
