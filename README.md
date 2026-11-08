@@ -173,65 +173,140 @@ GitPulse/
 
 ---
 
-## Installation Guide (Beginner Friendly)
+## Visual Step-by-Step Installation & Setup Guide
 
-Setting up GitPulse takes less than 3 minutes:
+GitPulse is ready to use in less than 3 minutes. Follow this visual walkthrough:
 
-1. **Download GitPulse**:
-   - Click the green **[Download GitPulse ZIP](https://github.com/zain-cmd-hub/GitPulse/archive/refs/heads/main.zip)** button above, or clone using:
-     ```bash
-     git clone https://github.com/zain-cmd-hub/GitPulse.git
-     ```
-2. **Extract the ZIP**:
-   Extract the archive to a convenient folder on your computer.
-3. **Open Chrome Extensions**:
-   Navigate to `chrome://extensions/` in your browser.
-4. **Enable Developer Mode**:
-   Toggle the **Developer mode** switch in the top-right corner to **ON**.
-5. **Load Unpacked**:
-   Click **Load unpacked** in the top-left corner and select the extracted folder containing `manifest.json`.
-6. **Pin GitPulse**:
-   Click the puzzle piece icon in Chrome's toolbar and pin **GitPulse** (GP icon) for quick access.
+### Step 1: Open Chrome Extensions & Enable Developer Mode
+1. Open Google Chrome and type `chrome://extensions/` in the address bar.
+2. In the top-right corner, toggle **Developer mode** to **ON** (blue).
 
-For a detailed visual guide, see the [Installation Manual](docs/INSTALLATION.md).
+```text
+┌────────────────────────────────────────────────────────────────────────┐
+│ Extensions                                          Developer mode [●] │
+├────────────────────────────────────────────────────────────────────────┤
+│ [Load unpacked]  [Pack extension]  [Update]                            │
+└────────────────────────────────────────────────────────────────────────┘
+```
 
----
+### Step 2: Load the GitPulse Folder
+1. Click **Load unpacked** in the top-left toolbar.
+2. Select the extracted `GitPulse` root folder (containing `manifest.json`).
+3. The **GitPulse** extension card will appear immediately:
 
-## Configuration
+```text
+┌────────────────────────────────────────────────────────────────────────┐
+│ ┌────────────────────────────────────────────────────────────────────┐ │
+│ │ [GP] GitPulse 1.0.0                                       [Details]│ │
+│ │ Capture verified accepted 30ACC coding submissions and archive...  │ │
+│ │ ID: your-extension-id-here                                         │ │
+│ │ Inspect views: service worker (active)                             │ │
+│ │                                                         [🔄]  [●]  │ │
+│ └────────────────────────────────────────────────────────────────────┘ │
+└────────────────────────────────────────────────────────────────────────┘
+```
 
-### 1. Create a Target GitHub Repository
-Create a new public or private repository on GitHub (e.g., `30-Days-of-Code-2026---ACC`).
+### Step 3: Pin GitPulse to Your Toolbar
+Click Chrome's Extensions puzzle icon (🧩) and click the **Pin** icon (📌) next to GitPulse:
 
-### 2. Generate a Fine-Grained Personal Access Token (PAT)
+```text
+Chrome Toolbar:
+┌──────────────────────────────────────────────────────────────┐
+│  [ < ] [ > ] [ 🔄 ]  [ https://30accd.xyz/dashboard ]    [GP] [🧩] [👤]│
+└──────────────────────────────────────────────────────────────┘
+                                                             ▲
+                                                    Pinned GitPulse Icon
+```
+
+### Step 4: Generate a GitHub Personal Access Token (PAT)
 1. Go to [GitHub Token Settings (Beta)](https://github.com/settings/tokens?type=beta).
 2. Click **Generate new token**.
-3. Name: `GitPulse-Sync`.
-4. **Repository access**: Select **Only select repositories** and pick your target repository.
-5. **Permissions**: Under **Repository permissions**, set **Contents** to **Read and write**.
-6. Generate and copy the token (`github_pat_...`).
+3. Under **Repository access**, choose **Only select repositories** and pick your target repository.
+4. Under **Repository permissions**, set **Contents** to **Read and write**.
+5. Click **Generate token** and copy the token (`github_pat_11A...`).
 
-### 3. Save Settings in GitPulse
-1. Click the GitPulse extension icon → click **Settings**.
-2. Enter your **GitHub owner** (e.g., `zain-cmd-hub`).
-3. Enter your **Repository name** (e.g., `30-Days-of-Code-2026---ACC`).
-4. Paste your **Fine-grained GitHub token**.
-5. Click **Save settings**, then click **Verify GitHub access** to confirm push authorization.
+```text
+GitHub Token Creation Interface:
+┌────────────────────────────────────────────────────────────────────────┐
+│ Token name:    [ GitPulse-Sync                                       ] │
+│ Expiration:    [ 90 days                                           ▼ ] │
+│                                                                        │
+│ Repository access:                                                     │
+│ ( ) All repositories                                                   │
+│ (●) Only select repositories                                           │
+│     [ Select repositories: 30-Days-of-Code-2026---ACC              ▼ ] │
+│                                                                        │
+│ Repository permissions:                                                │
+│ ┌────────────────────────────────────────────────────────────────────┐ │
+│ │ Contents         Access: [ Read and write                        ▼]│ │
+│ │ (Metadata is automatically set to Read-only)                       │ │
+│ └────────────────────────────────────────────────────────────────────┘ │
+│                                                                        │
+│ [ Generate token ]                                                     │
+└────────────────────────────────────────────────────────────────────────┘
+```
 
-For step-by-step screenshots and classic token guidance, see the [Configuration Guide](docs/CONFIGURATION.md).
+### Step 5: Configure Settings & Verify Connection
+1. Click the GitPulse **GP** icon in your toolbar → click **Settings**.
+2. Enter your GitHub username (e.g. `zain-cmd-hub`), target repository name (`30-Days-of-Code-2026---ACC`), and paste your token.
+3. Click **Save settings**, then click **Verify GitHub access**.
+
+```text
+GitPulse Settings Screen:
+┌────────────────────────────────────────────────────────────────────────┐
+│ GitPulse Settings                                                      │
+│ Connect one GitHub repository. Token is kept in secure local storage.  │
+│                                                                        │
+│ GitHub owner / username                                                │
+│ [ zain-cmd-hub                                                       ] │
+│                                                                        │
+│ Repository name                                                        │
+│ [ 30-Days-of-Code-2026---ACC                                         ] │
+│                                                                        │
+│ Fine-grained GitHub token                                              │
+│ [ •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••• ] │
+│ Token saved securely in extension storage.                             │
+│                                                                        │
+│ [✓] Enable automatic upload after verified ACCEPTED result             │
+│                                                                        │
+│ [ Save settings ]   [ Verify GitHub access ]   [ Remove saved token ]  │
+│                                                                        │
+│ Status: Connected: zain-cmd-hub/30-Days-of-Code-2026---ACC (push ok)   │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### Step 6: Solve Challenges with Live Diagnostics & Feedback
+1. Navigate to any problem on [30accd.xyz/dashboard](https://30accd.xyz/dashboard).
+2. Open GitPulse and click **Run diagnostics** to inspect active editor detection:
+
+```text
+┌──────────────────────────────────────────────┐
+│  [GP] GitPulse                               │
+│  Current page diagnostics                    │
+│  Contains Duplicate II                       │
+│  ------------------------------------------  │
+│  Day: 6                                      │
+│  Editor: monaco                              │
+│  Language: javascript                        │
+│  Code length: 245                            │
+│  Submit button: Detected                     │
+│                                              │
+│  [ Run diagnostics ]   [ Copy report ]       │
+└──────────────────────────────────────────────┘
+```
+
+3. Write your code and click **Submit Solution**.
+4. GitPulse displays live on-screen toast alerts on the webpage:
+   - On click: `⚡ Submission attempt detected. ACCEPTED result ka wait ho raha hai…`
+   - On pass: `⚡ ACCEPTED submission GitHub par save ho gaya!`
+5. Your solution code, metadata, and 30-day tracking dashboard are instantly synced to your GitHub repository!
 
 ---
 
-## How to Use GitPulse
-
-1. **Open a Challenge**: Navigate to any challenge on [30accd.xyz/dashboard](https://30accd.xyz/dashboard).
-2. **Run Diagnostics**: Click the GitPulse icon and click **Run diagnostics** to verify editor detection.
-3. **Solve & Submit**: Write your code and click the platform's **Submit** or **Update Solution** button.
-4. **Observe Toast Feedback**:
-   - `Submission attempt detected. ACCEPTED result ka wait ho raha hai…`
-   - Once tests pass: `ACCEPTED submission GitHub par save ho gaya!`
-5. **View Your Repository**: Your code, metadata, problem summary, and dashboard table are instantly updated.
-
-For a comprehensive workflow breakdown, see the [Usage Guide](docs/USAGE.md).
+For additional details, see our in-depth guides:
+- 📖 [Full Installation Guide](docs/INSTALLATION.md)
+- ⚙️ [Full Configuration Guide](docs/CONFIGURATION.md)
+- 🚀 [Full Usage Guide](docs/USAGE.md)
 
 ---
 
