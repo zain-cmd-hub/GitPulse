@@ -4,29 +4,32 @@ A comprehensive, beginner-friendly walkthrough for installing, setting up, and v
 
 ---
 
-## Prerequisites
+## Visual Installation Flowchart
 
-Before starting, ensure you have:
-
-1. A modern Chromium-based web browser:
-   - **Google Chrome** (v88 or newer recommended)
-   - **Brave**, **Microsoft Edge**, **Opera**, or **Arc**
-2. An active [GitHub account](https://github.com/).
-3. A local copy or ZIP download of the GitPulse project folder.
+```text
+┌─────────────────────┐      ┌─────────────────────┐      ┌─────────────────────┐
+│ 1. Download / Extract│ ───► │ 2. Open Extensions  │ ───► │ 3. Developer Mode   │
+│    GitPulse Folder   │      │    chrome://extensions│   │    Toggle ON [●]    │
+└─────────────────────┘      └─────────────────────┘      └──────────┬──────────┘
+                                                                     │
+┌─────────────────────┐      ┌─────────────────────┐      ┌──────────▼──────────┐
+│ 6. Verify Diagnostic│ ◄─── │ 5. Pin to Toolbar   │ ◄─── │ 4. Click "Load      │
+│    on 30accd.xyz     │      │    Click Puzzle [📌] │      │    unpacked" Folder │
+└─────────────────────┘      └─────────────────────┘      └─────────────────────┘
+```
 
 ---
 
 ## Step 1: Clone or Download GitPulse
 
 ### Option A: Download as a ZIP (Beginner Friendly)
-1. Navigate to the GitHub repository: [https://github.com/zain-cmd-hub/GitPulse](https://github.com/zain-cmd-hub/GitPulse).
-2. Click the green **Code** button and select **Download ZIP**.
-3. Locate the downloaded file (e.g., `GitPulse-main.zip`) in your `Downloads` folder.
-4. Right-click the file and select **Extract All...** (Windows) or double-click to uncompress (macOS/Linux).
-5. Ensure you have a folder containing `manifest.json`, `background/`, `content/`, `popup/`, and `options/`.
+1. Download GitPulse using the direct download button in `README.md` or via GitHub:
+   - [Download GitPulse ZIP](https://github.com/zain-cmd-hub/GitPulse/archive/refs/heads/main.zip)
+2. Locate `GitPulse-main.zip` in your `Downloads` folder.
+3. Right-click and choose **Extract All...** (Windows) or double-click to uncompress (macOS/Linux).
+4. Verify you see the extracted folder containing `manifest.json`, `background/`, `content/`, and `popup/`.
 
-### Option B: Clone using Git (Recommended for Developers)
-Open your terminal or PowerShell and run:
+### Option B: Clone using Git
 ```bash
 git clone https://github.com/zain-cmd-hub/GitPulse.git
 cd GitPulse
@@ -37,86 +40,147 @@ cd GitPulse
 ## Step 2: Open Chrome Extensions Page
 
 1. Launch Google Chrome.
-2. In the Chrome address bar (URL bar), type:
+2. In the Chrome address bar, type:
    ```text
    chrome://extensions/
    ```
    and press **Enter**.
-3. Alternatively, you can click the **three dots menu (⋮)** in the top right corner of Chrome → **Extensions** → **Manage Extensions**.
 
 ---
 
-## Step 3: Enable Developer Mode
+## Step 3: Enable Developer Mode (Visual Guide)
 
-In the top-right corner of the Extensions page, look for the toggle switch labeled **Developer mode**.
+In the top-right corner of the Extensions page, locate and toggle **Developer mode**:
 
+```text
+┌────────────────────────────────────────────────────────────────────────┐
+│ Extensions                                          Developer mode [●] │
+├────────────────────────────────────────────────────────────────────────┤
+│ [Load unpacked]  [Pack extension]  [Update]                            │
+└────────────────────────────────────────────────────────────────────────┘
 ```
+
+- When turned **ON**, the three toolbar buttons appear: **Load unpacked**, **Pack extension**, and **Update**.
+
+---
+
+## Step 4: Click "Load unpacked" & Select Folder
+
+1. Click the **Load unpacked** button in the top-left toolbar.
+2. In the folder picker, select the GitPulse root directory:
+   ```text
+   C:\Users\Abbas\Downloads\30ACC-LeetHub-Complete-Fixed\30ACC-LeetHub-Complete
+   ```
+   *(Select the folder directly containing `manifest.json`).*
+3. Click **Select Folder**.
+4. You will immediately see the **GitPulse** extension card installed:
+
+```text
+┌────────────────────────────────────────────────────────────────────────┐
+│ ┌────────────────────────────────────────────────────────────────────┐ │
+│ │ [GP] GitPulse 1.0.0                                       [Details]│ │
+│ │ Capture verified accepted 30ACC coding submissions and archive...  │ │
+│ │ ID: your-extension-id-here                                         │ │
+│ │ Inspect views: service worker (active)                             │ │
+│ │                                                         [🔄]  [●]  │ │
+│ └────────────────────────────────────────────────────────────────────┘ │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## Step 5: Pin GitPulse to Your Chrome Toolbar
+
+1. Click the **Extensions Puzzle Piece icon** (🧩) in the top-right Chrome toolbar.
+2. Find **GitPulse** in the list.
+3. Click the **Pin icon** (📌) next to it so it turns blue.
+
+```text
+Chrome Toolbar:
 ┌──────────────────────────────────────────────────────────────┐
-│ Extensions                               [ Developer mode ] ◉│
+│  [ < ] [ > ] [ 🔄 ]  [ https://30accd.xyz/dashboard ]    [GP] [🧩] [👤]│
 └──────────────────────────────────────────────────────────────┘
+                                                             ▲
+                                                    Pinned GitPulse Icon
 ```
 
-- Click the toggle switch to turn it **ON** (blue).
-- Notice that three new buttons appear in the top-left toolbar:
-  - **Load unpacked**
-  - **Pack extension**
-  - **Update**
+---
+
+## Step 6: Initial Configuration & Verification
+
+1. Click the pinned **GitPulse (GP)** icon in your toolbar.
+2. The popup interface will appear:
+
+```text
+┌──────────────────────────────────────────────┐
+│  [GP] GitPulse                               │
+│       Challenge → Accepted → GitHub          │
+├──────────────────────────────────────────────┤
+│  GitHub                      [ Checking… ]   │
+│  Not configured                              │
+│  [ Verify GitHub ]                           │
+├──────────────────────────────────────────────┤
+│  Current page diagnostics                    │
+│  Open a 30accd.xyz challenge page.           │
+│  [ Run diagnostics ]   [ Copy report ]       │
+├──────────────────────────────────────────────┤
+│  Automatic upload                    [ — ]   │
+│  Uploads only after fresh accepted dialog    │
+├──────────────────────────────────────────────┤
+│  [ Settings ]          [ Open repository ]   │
+└──────────────────────────────────────────────┘
+```
+
+3. Click the **Settings** button to open the Options page.
+4. Follow the [Configuration Guide](./CONFIGURATION.md) to link your GitHub repository and token.
 
 ---
 
-## Step 4: Load the Unpacked Extension
+## Step 7: Visual Verification on Challenge Page
 
-1. Click the **Load unpacked** button in the top-left corner.
-2. A folder picker dialog will appear.
-3. Browse to and select the root directory of GitPulse (the folder that directly contains `manifest.json`).
-4. Click **Select Folder** (Windows) or **Select** (macOS).
-5. The **GitPulse** extension card will now appear in your list of installed extensions with version `1.0.0` and description:
-   > *"Capture verified accepted 30ACC coding submissions and archive them to GitHub."*
+1. Open `https://30accd.xyz/dashboard` and select any coding problem.
+2. Click the GitPulse icon and click **Run diagnostics**.
+3. You should see a live healthy readout:
 
----
+```text
+┌──────────────────────────────────────────────┐
+│  Current page diagnostics                    │
+│  Contains Duplicate II                       │
+│  ------------------------------------------  │
+│  Day: 6                                      │
+│  Challenge ID: dsa-day-06-contains-duplicate │
+│  Difficulty: easy                            │
+│  Editor: monaco                              │
+│  Editor count: 1                             │
+│  Language: javascript                        │
+│  Code length: 245                            │
+│  Extraction: api                             │
+│  Submit button: Detected                     │
+│                                              │
+│  [ Run diagnostics ]   [ Copy report ]       │
+└──────────────────────────────────────────────┘
+```
 
-## Step 5: Pin GitPulse to Your Toolbar
-
-To make GitPulse easily accessible while coding:
-
-1. Click the **Puzzle Piece icon** (Extensions) in the top-right corner of Chrome's toolbar (next to your profile picture).
-2. Find **GitPulse** in the dropdown list.
-3. Click the **Pin icon** (📌) next to GitPulse so it turns blue.
-4. The GitPulse **GP** icon is now pinned to your toolbar.
-
----
-
-## Step 6: Initial Configuration
-
-1. Click the pinned **GitPulse** icon in your toolbar to open the popup.
-2. Click the **Settings** button at the bottom of the popup (or right-click the GitPulse icon and select **Options**).
-3. Follow our step-by-step [Configuration Guide](./CONFIGURATION.md) to:
-   - Create your GitHub target repository.
-   - Generate a fine-grained Personal Access Token with `Contents: Read and write` permissions.
-   - Save credentials and verify repository access.
-
----
-
-## Step 7: Verify Installation on the Coding Platform
-
-1. Navigate to `https://30accd.xyz/dashboard` and open an active coding challenge.
-2. Click the pinned **GitPulse** extension icon.
-3. Click **Run diagnostics**.
-4. Confirm that:
-   - **Editor** displays your active editor (e.g., `monaco`, `codemirror5`, `codemirror6`, or `ace`).
-   - **Language** displays your selected programming language.
-   - **Code length** reflects a non-zero character count.
-   - **Submit button** displays `Detected`.
-
-Congratulations! GitPulse is now fully installed and primed for automated solution synchronization.
+4. Write your solution and click **Submit Solution**.
+5. GitPulse will display an on-screen toast in the lower right:
+   ```text
+   ┌──────────────────────────────────────────────────────────┐
+   │ ⚡ Submission attempt detected. ACCEPTED result ka wait...│
+   └──────────────────────────────────────────────────────────┘
+   ```
+6. Once the platform evaluates your solution as `ACCEPTED`, GitPulse updates GitHub and displays:
+   ```text
+   ┌──────────────────────────────────────────────────────────┐
+   │ ⚡ ACCEPTED submission GitHub par save ho gaya!          │
+   └──────────────────────────────────────────────────────────┘
+   ```
 
 ---
 
-## How to Update GitPulse When You Make Code Changes
+## How to Reload After Code Changes
 
-Since GitPulse is loaded unpacked:
-1. Whenever you edit or pull code updates, open `chrome://extensions/`.
-2. Locate the **GitPulse** extension card.
-3. Click the circular **Reload** icon (🔄).
-4. Refresh any open challenge tabs on `https://30accd.xyz/` to load the latest scripts.
-
+When you make changes to files:
+1. Go to `chrome://extensions/`.
+2. Locate the **GitPulse** card.
+3. Click the **Reload icon** (🔄).
+4. Refresh your challenge tab on `30accd.xyz`.
